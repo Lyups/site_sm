@@ -76,7 +76,7 @@ const Header = () => {
             )}
           </button>
         </div>
-
+            {/* Нужна логика, если <= 1025px ширина экрана, то это мобильная версия */}
         <MobileMenu
           isMenuOpen={isMenuOpen}
           toggleMenu={toggleMenu}
