@@ -1,7 +1,7 @@
 import './globals.css'
-import Header from '../components/Header/Header'
-import Footer from '../components/Footer'
-import Breadcrumbs from '../components/Breadcrumbs'
+import Header from '../componentsSite/Header/Header'
+import Footer from '../componentsSite/Footer/Footer'
+import Breadcrumbs from '../componentsSite/Breadcrumbs'
 
 export default function RootLayout({
   children,

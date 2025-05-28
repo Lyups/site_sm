@@ -1,8 +1,10 @@
 // пустая и голая страница > копировать-вставить-наполнить/исправить
 
 export const metadata = {
-  title: 'EXAMPLE',
-  description: 'desc example',
+  // Заголовок страницы
+  title: 'about страница', 
+  // Описание страницы
+  description: 'описание about',
 };
 
 export default function About() {
@@ -22,7 +24,7 @@ export default function About() {
 
 
     {/* ОСНОВА СТАРТ */}
-
+    Какой-то контент, наполняй и используй этот тег {/* */} для комментариев
     {/* ОСНОВА ФИНИШ */}
 
     {/* вниз баннер */}

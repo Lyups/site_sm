@@ -23,6 +23,7 @@ const Header = () => {
   }
 
   return (
+    // <header className="bg-gradient-to-r from-blue-300 via-white to-blue-300 shadow-sm py-4">
     <header className="bg-white shadow-sm py-4">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
