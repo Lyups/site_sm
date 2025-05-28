@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 'use client'
 
+=======
+>>>>>>> 8438dc29ebf7b2fbe50b4fc1f0f8dd761dc25047
 import Image from 'next/image'
 
 const Logo = () => {
   return (
+<<<<<<< HEAD
     <div className="mr-12 flex items-center gap-2">
       <Image
         src="/images/smfull.svg"
@@ -24,6 +28,20 @@ const Logo = () => {
         {/* <div className="text-xs text-gray-500">Благотворительный фонд им. К.Э. Циолковского</div> */}
       {/* </div> */}
      </div>
+=======
+    <div className="mr-8 flex items-center gap-2">
+      <Image
+        src="/images/logo_sm.svg"
+        alt="Логотип СПУТНИК МИРА"
+        width={40}
+        height={40}
+      />
+      <div>
+        <div className="font-bold text-3xl text-blue-700">СПУТНИК МИРА</div>
+        {/* <div className="text-xs text-gray-500">Благотворительный фонд им. К.Э. Циолковского</div> */}
+      </div>
+    </div>
+>>>>>>> 8438dc29ebf7b2fbe50b4fc1f0f8dd761dc25047
   )
 }
 
