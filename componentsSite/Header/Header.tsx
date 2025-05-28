@@ -4,23 +4,12 @@ import { useState } from 'react'
 import Logo from './Logo'
 import DesktopMenu from './DesktopMenu'
 import MobileMenu from './MobileMenu'
-import SearchForm from './SearchForm'
-import SearchButton from './SearchButton'
 import Link from 'next/link'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const [searchQuery, setSearchQuery] = useState('')
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
-  const toggleSearch = () => setIsSearchOpen(!isSearchOpen)
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log('Search query:', searchQuery)
-    toggleSearch()
-  }
 
   return (
     // <header className="bg-gradient-to-r from-blue-300 via-white to-blue-300 shadow-sm py-4">
@@ -33,28 +22,24 @@ const Header = () => {
 
         <div className="flex items-center space-x-4">
           <div className="hidden md:flex items-center gap-2">
-            <SearchForm
-              isSearchOpen={isSearchOpen}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              toggleSearch={toggleSearch}
-              handleSearch={handleSearch}
-            />
-            {!isSearchOpen && <SearchButton isSearchOpen={isSearchOpen} toggleSearch={toggleSearch} />}
+            <Link 
+              href="/search" 
+              className="py-2 px-4 text-black hover:text-blue-600 transition duration-300 flex items-center gap-2"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.3-4.3"/>
+              </svg>
+              Поиск
+            </Link>
           </div>
 
           <div className="hidden md:flex space-x-2">
             <Link 
-              href="/login" 
+              href="/profile" 
               className="py-2 px-4 text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-md shadow-sm transition duration-300"
             >
-              Войти
-            </Link>
-            <Link 
-              href="/register" 
-              className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
-            >
-              Регистрация
+              Личный кабинет
             </Link>
           </div>
 
@@ -81,10 +66,6 @@ const Header = () => {
         <MobileMenu
           isMenuOpen={isMenuOpen}
           toggleMenu={toggleMenu}
-          isSearchOpen={isSearchOpen}
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          handleSearch={handleSearch}
         />
       </div>
     </header>

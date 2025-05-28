@@ -1,21 +1,15 @@
+'use client'
+
 import Link from 'next/link'
 
 type MobileMenuProps = {
   isMenuOpen: boolean
   toggleMenu: () => void
-  isSearchOpen: boolean
-  searchQuery: string
-  setSearchQuery: (query: string) => void
-  handleSearch: (e: React.FormEvent) => void
 }
 
 const MobileMenu = ({
   isMenuOpen,
   toggleMenu,
-  isSearchOpen,
-  searchQuery,
-  setSearchQuery,
-  handleSearch,
 }: MobileMenuProps) => {
   return (
     isMenuOpen && (
@@ -31,54 +25,42 @@ const MobileMenu = ({
             </button>
           </div>
 
-          {/* Поиск */}
-          <form onSubmit={handleSearch} className="flex-1 flex items-center gap-2 p-4">
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Поиск..."
-              className="w-full py-2 px-3 border rounded-lg focus:outline-blue-500 text-black"
-              autoFocus
-            />
-          </form>
-
           {/* Навигация */}
           <nav className="flex flex-col p-4 space-y-4">
-            <Link href="/" onClick={toggleMenu} className="text-gray-700 hover:text-blue-600 py-2">
+            <Link href="/" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2">
               Главная
             </Link>
-            <Link href="/about" onClick={toggleMenu} className="text-gray-700 hover:text-blue-600 py-2">
+            <Link href="/search" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.3-4.3"/>
+              </svg>
+              Поиск
+            </Link>
+            <Link href="/about" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2">
               О проекте
             </Link>
-            <Link href="/ranks" onClick={toggleMenu} className="text-gray-700 hover:text-blue-600 py-2">
+            <Link href="/ranks" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2">
               Система званий
             </Link>
-            <Link href="/awards" onClick={toggleMenu} className="text-gray-700 hover:text-blue-600 py-2">
+            <Link href="/awards" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2">
               Премии
             </Link>
-            <Link href="/voting" onClick={toggleMenu} className="text-gray-700 hover:text-blue-600 py-2">
+            <Link href="/voting" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2">
               Голосования
             </Link>
-            <Link href="/news" onClick={toggleMenu} className="text-gray-700 hover:text-blue-600 py-2">
+            <Link href="/news" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2">
               Новости
             </Link>
 
             {/* Кнопки */}
             <div className="mt-4 space-y-2">
               <Link
-                href="/login"
+                href="/profile"
                 onClick={toggleMenu}
                 className="block w-full text-center py-2 px-4 text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-md"
               >
-                Войти
-              </Link>
-              <Link
-                href="/register"
-                onClick={toggleMenu}
-                className="block w-full text-center py-2 px-4 bg-green-600 text-white rounded-lg"
-              >
-                Регистрация
+                Личный кабинет
               </Link>
             </div>
           </nav>

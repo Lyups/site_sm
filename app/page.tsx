@@ -9,11 +9,11 @@ export default function Home() {
       {/* <!-- Главная Секция --> */}
     <section className="relative py-20 bg-gradient-to-r from-blue-900 via-blue-500 to-blue-900 text-white animate-gradient shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3)]">
         <div className="absolute inset-0 opacity-20 bg-cover bg-black bg-center"></div>
-        <div className="absolute right-[-50px] top-0 bottom-0 w-[30%] min-w-[400px] hidden md:block">
+        <div className="absolute right-[-50px] top-0 bottom-0 w-[30%] min-w-[400px] hidden md:block flex items-center">
             <img 
                 src="/images/space.png" 
                 alt="Циолковский" 
-                className="w-full h-full object-cover opacity-80" // Прозрачность
+                className="w-full h-auto max-h-full object-contain opacity-80" 
             />
         </div>
         <div className="container mx-auto px-4 relative z-10">
@@ -21,15 +21,9 @@ export default function Home() {
                 <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in text-shadow-lg">Волонтёры — Элита XXI века</h1>
                 <p className="text-xl mb-8 animate-fade-in animation-delay-200 text-shadow">
                     «Основной мотив моей жизни — сделать что-нибудь полезное для людей,
-<<<<<<< HEAD
-                    продвинуть человечество хоть немного вперёд...»
-                </p>
-                <p className="italic mb-8 animate-fade-in animation-delay-400 text-shadow">К.Э. Циолковский</p>
-=======
                     продвинуть человечество хоть немного вперед»
                 </p>
                 <p className="italic mb-8 animate-fade-in animation-delay-400 text-shadow">— К.Э. Циолковский</p>
->>>>>>> 8438dc29ebf7b2fbe50b4fc1f0f8dd761dc25047
                 <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in animation-delay-600">
                     <a href="/404" className="bg-white text-blue-700 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition shadow-lg">
                         Стать волонтёром
@@ -96,12 +90,8 @@ export default function Home() {
                     <div className="p-6">
                         <h3 className="text-xl font-bold mb-3 text-black">Номинации и премии</h3>
                         <p className="text-gray-600 mb-4">
-<<<<<<< HEAD
-                            Премия «Благородное сердце» и конкурс «Поступок года»
-=======
                             Премия «Благородное сердце», конкурс «Поступок года», другие для признания 
                             выдающихся поступков и достижений.
->>>>>>> 8438dc29ebf7b2fbe50b4fc1f0f8dd761dc25047
                         </p>
                         {/* <a href="/404" className="text-blue-600 font-medium flex items-center">
                             Подробнее 
@@ -132,15 +122,9 @@ export default function Home() {
                         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-line-chart text-purple-500"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
                     </div>
                     <div className="p-6">
-<<<<<<< HEAD
-                        <h3 className="text-xl font-bold mb-3 text-black">Рейтинг и статус</h3>
-                        <p className="text-gray-600 mb-4">
-                            Организаций, корпораций,
-=======
                         <h3 className="text-xl font-bold mb-3 text-black">Рейтинг</h3>
                         <p className="text-gray-600 mb-4">
                             организаций, корпораций,
->>>>>>> 8438dc29ebf7b2fbe50b4fc1f0f8dd761dc25047
                             учреждений и городов 
                         </p>
                         {/* <a href="/404" className="text-blue-600 font-medium flex items-center">
@@ -155,16 +139,10 @@ export default function Home() {
                         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-book-open text-amber-500"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                     </div>
                     <div className="p-6">
-<<<<<<< HEAD
-                        <h3 className="text-xl font-bold mb-3 text-black">Всемирный конкурс по русскому языку.</h3>
-                        <p className="text-gray-600 mb-4 font-bold">
-                        Всемирный диктант «Спутник Мира»   
-=======
                         <h3 className="text-xl font-bold mb-3 text-black">Всемирный конкурс «Русский язык - Спутник Мира»</h3>
                         <p className="text-gray-600 mb-4">
                             Всемирный диктант по
                             русскому языку.
->>>>>>> 8438dc29ebf7b2fbe50b4fc1f0f8dd761dc25047
                         </p>
                         {/* <a href="/404" className="text-blue-600 font-medium flex items-center">
                             Подробнее 
@@ -180,11 +158,7 @@ export default function Home() {
                     <div className="p-6">
                         <h3 className="text-xl font-bold mb-3 text-black">Время твоего голоса</h3>
                         <p className="text-gray-600 mb-4">
-<<<<<<< HEAD
-                            Голосование
-=======
                             Открытое народное голосование
->>>>>>> 8438dc29ebf7b2fbe50b4fc1f0f8dd761dc25047
                             за номинантов премии.
                         </p>
                         {/* <a href="/404" className="text-blue-600 font-medium flex items-center">
@@ -205,11 +179,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-4 text-black">Текущие голосования</h2>
             <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-<<<<<<< HEAD
-                Голосуй за лучших из первых Спутников Мира.
-=======
                 Голосуй за лучших из первых «Спутников Мира».
->>>>>>> 8438dc29ebf7b2fbe50b4fc1f0f8dd761dc25047
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -224,23 +194,9 @@ export default function Home() {
                         <div className="h-72 bg-gray-200 bg-[url('/images/img5.jpg')] bg-cover bg-center rounded-lg mb-4"></div>
                     </div>
                     <p className="text-gray-600 mb-4">
-<<<<<<< HEAD
-                        За присвоение премии Спутник Мира выдающемуся российскому хоккеисту
-                        Александру Овечкину в номинации спорт.
-                    </p>
-=======
                         За присвоение статуса «Спутник мира» выдающемуся российскому хоккеисту
                         Александру Овечкину за его спортивные достижения мирового уровня.
                     </p>
-                    {/* <div className="mb-4">
-                        <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                          <div className="h-full bg-green-600 rounded-full w-[67%]"></div>
-                        </div>
-                        <div className="flex justify-between mt-1 text-sm text-gray-500">
-                            <span>Старт голосования - осень 2025г</span>
-                        </div>
-                    </div> */}
->>>>>>> 8438dc29ebf7b2fbe50b4fc1f0f8dd761dc25047
                     <p className="text-sm text-gray-500 mb-4">Старт голосования - осень 2025г</p>
                     <a href="/404" className="block w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition text-center">
                         Голосовать
@@ -260,18 +216,6 @@ export default function Home() {
                     <p className="text-gray-600 mb-4">
                         За присвоение городу-герою Сталинград статуса Спутник Мира в номинации Всемирное историческое наследие.
                     </p>
-<<<<<<< HEAD
-=======
-                    {/* <div className="mb-4">
-                        <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                            <div className="h-full bg-green-600 rounded-full w-[52%]"></div>
-                        </div>
-                        <div className="flex justify-between mt-1 text-sm text-gray-500">
-                            <span>128,756 голосов</span>
-                            <span>Осталось 156 дней</span>
-                        </div>
-                    </div> */}
->>>>>>> 8438dc29ebf7b2fbe50b4fc1f0f8dd761dc25047
                     <p className="text-sm text-gray-500 mb-4">Старт голосования - осень 2025г</p>
                     <a href="/404" className="block w-full bg-green-600 text-white py-2 rounded-lg font-medium hover:bg-green-700 transition text-center">
                         Голосовать
@@ -517,13 +461,8 @@ export default function Home() {
                 </div>
             </div>
             
-<<<<<<< HEAD
-            <div className="text-center mt-16">
-                <a href="/404" className="bg-blue-600 text-white px-10 py-4 rounded-xl font-medium hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg inline-block">
-=======
             <div className="text-center mt-12">
                 <a href="/404" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition">
->>>>>>> 8438dc29ebf7b2fbe50b4fc1f0f8dd761dc25047
                     Начать свой путь
                 </a>
             </div>
