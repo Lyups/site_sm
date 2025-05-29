@@ -1,6 +1,6 @@
 import './globals.css'
-import Header from '../componentsSite/Header/Header'
-import Footer from '../componentsSite/Footer/Footer'
+import Header from '../componentsSite/Header'
+import Footer from '../componentsSite/Footer'
 import Breadcrumbs from '../componentsSite/Breadcrumbs'
 
 export default function RootLayout({

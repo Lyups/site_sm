@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { useMemo } from 'react'
 
 const Breadcrumbs = () => {
   const pathname = usePathname()
@@ -10,7 +11,7 @@ const Breadcrumbs = () => {
   if (pathname === '/') return null
 
   // связка названий с индексами
-  const breadcrumbTitles: { [key: string]: string } = {
+  const breadcrumbTitles = useMemo<Record<string, string>>(() => ({
     '': 'Главная',
     about: 'О проекте',
     ranks: 'Система званий',
@@ -20,12 +21,16 @@ const Breadcrumbs = () => {
     login: 'Вход',
     register: 'Регистрация',
     profile: 'Профиль пользователя',
-  }
+    laureates: 'Лауреаты'
+  }), [])
 
   // Убираем слеши и преобразуем в массив
-  const pathSegments = pathname
-  .split('/')
-  .filter((segment) => segment !== '')
+  const pathSegments = useMemo(() =>
+    pathname
+      .split('/')
+      .filter((segment) => segment !== ''),
+    [pathname]
+  )
 
   return (
     <div className="py-1 bg-white">
@@ -36,8 +41,6 @@ const Breadcrumbs = () => {
               <Link href="/" className="hover:text-blue-600">Главная</Link>
               {pathSegments.map((segment, index) => {
                 const path = '/' + pathSegments.slice(0, index + 1).join('/')
-
-                // Получаем название для текущего сегмента
                 const title = breadcrumbTitles[segment] || decodeURIComponent(segment)
 
                 return (
