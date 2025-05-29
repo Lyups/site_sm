@@ -1,2 +1,4 @@
 ignoredBuiltDependencies:
   - '@heroui/shared-utils'
+  - '@tailwindcss/oxide'
+  - sharp

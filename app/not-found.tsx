@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 export default function NotFound() {
   useEffect(() => {
-    document.title = 'Сайт на ремонте — sputnikmira.ru';
+    document.title = 'Сайт на реконструкции — sputnikmira.ru';
   }, []);
 
   return (

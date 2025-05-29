@@ -57,7 +57,7 @@ export default function App() {
           ))}
         </div>
         <div className="relative z-10">
-          <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">Лауреаты премии Спутник Мира в номинации</h1>
+          <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">Кандидаты в лауреаты премии Спутник Мира в номинации</h1>
           <div className="w-full max-w-3xl mx-auto h-[0.5px] bg-gradient-to-r from-transparent via-blue-400 to-transparent mb-8 animate-pulse"></div>
           
           <Tabs 
