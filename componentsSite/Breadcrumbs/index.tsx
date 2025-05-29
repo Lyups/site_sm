@@ -7,9 +7,6 @@ import { useMemo } from 'react'
 const Breadcrumbs = () => {
   const pathname = usePathname()
 
-  // Не отображать на главной странице !
-  if (pathname === '/') return null
-
   // связка названий с индексами
   const breadcrumbTitles = useMemo<Record<string, string>>(() => ({
     '': 'Главная',
@@ -31,6 +28,9 @@ const Breadcrumbs = () => {
       .filter((segment) => segment !== ''),
     [pathname]
   )
+
+  // Не отображать на главной странице !
+  if (pathname === '/') return null
 
   return (
     <div className="py-1 bg-white">

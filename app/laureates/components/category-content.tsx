@@ -1,5 +1,6 @@
 import React from "react";
-import { Card, CardBody, Image } from "@heroui/react";
+import { Card, CardBody } from "@heroui/react";
+import Image from "next/image";
 import { getCategoryData } from "../data/category-data";
 
 const PenIcon = () => (
@@ -27,19 +28,21 @@ export const CategoryContent: React.FC<CategoryContentProps> = ({ category }) =>
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col md:flex-row justify-center gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {categoryData.laureates.map((laureate, idx) => (
           <Card 
             key={idx}
-            className="bg-white text-black rounded-3xl shadow-lg w-full md:w-1/3 max-w-3xl min-h-[350px]"
+            className="bg-white text-black rounded-3xl shadow-lg min-h-[350px]"
           >
             <CardBody className="flex flex-col items-center px-6 py-8">
-              <div className="mb-6 w-full flex justify-center">
+              <div className="mb-6 w-full flex justify-center relative h-60">
                 <Image
                   src={laureate.image}
                   alt={`Фотография ${laureate.name}`}
-                  className="rounded-lg w-100 h-60 object-cover"
-                  fallbackSrc="/images/laureates/placeholder.jpg" // заглушка если нет фото
+                  fill
+                  className="rounded-lg object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority={idx < 3}
                 />
               </div>
               <div className="text-center">

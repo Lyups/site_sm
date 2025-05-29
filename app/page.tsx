@@ -6,12 +6,12 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      {/* <!-- Главная Секция --> */}
+      {/* <!-- Hero блок --> */}
     <section className="relative py-20 bg-gradient-to-r from-blue-900 via-blue-500 to-blue-900 text-white animate-gradient shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3)]">
         <div className="absolute inset-0 opacity-20 bg-cover bg-black bg-center"></div>
         <div className="absolute right-[-50px] top-0 bottom-0 w-[30%] min-w-[400px] hidden md:block flex items-center">
             <img 
-                src="/images/space.png" 
+                src="/images/hero/space.png" 
                 alt="Циолковский" 
                 className="w-full h-auto max-h-full object-contain opacity-80" 
             />
@@ -211,7 +211,7 @@ export default function Home() {
                                 Всемирное историческое наследие
                             </span>
                         </div>
-                        <div className="h-72 bg-gray-200 bg-[url('/images/img6.jpeg')] bg-cover bg-center rounded-lg mb-4"></div>
+                        <div className="h-72 bg-gray-200 bg-[url('/images/img6.jpg')] bg-cover bg-center rounded-lg mb-4"></div>
                     </div>
                     <p className="text-gray-600 mb-4">
                         За присвоение городу-герою Сталинград статуса Спутник Мира в номинации Всемирное историческое наследие.
