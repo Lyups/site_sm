@@ -7,7 +7,7 @@ import { useMemo } from 'react'
 const Breadcrumbs = () => {
   const pathname = usePathname()
 
-  // Не отображать на главной странице
+  // Не отображать на главной странице !
   if (pathname === '/') return null
 
   // связка названий с индексами
