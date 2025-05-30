@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card, CardBody } from "@heroui/react";
 import Image from "next/image";
 import { getCategoryData } from "../data/category-data";
-import { ImageModal } from "../../about/components/ImageModal";
 
 const PenIcon = () => (
   <svg 
@@ -20,11 +19,11 @@ const PenIcon = () => (
 
 interface CategoryContentProps {
   category: string;
+  onImageClick: (image: { src: string; alt: string }) => void;
 }
 
-export const CategoryContent: React.FC<CategoryContentProps> = ({ category }) => {
+export const CategoryContent: React.FC<CategoryContentProps> = ({ category, onImageClick }) => {
   const categoryData = getCategoryData(category);
-  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
   
   if (!categoryData) return null;
 
@@ -39,7 +38,7 @@ export const CategoryContent: React.FC<CategoryContentProps> = ({ category }) =>
             <CardBody className="flex flex-col items-center px-6 py-8">
               <div 
                 className="mb-6 w-full flex justify-center relative h-60 bg-white rounded-lg cursor-pointer"
-                onClick={() => setSelectedImage({ src: laureate.image, alt: `Фотография ${laureate.name}` })}
+                onClick={() => onImageClick({ src: laureate.image, alt: `Фотография ${laureate.name}` })}
               >
                 <Image
                   src={laureate.image}
@@ -59,14 +58,6 @@ export const CategoryContent: React.FC<CategoryContentProps> = ({ category }) =>
           </Card>
         ))}
       </div>
-
-      {/* Модальное окно */}
-      {selectedImage && (
-        <ImageModal
-          image={selectedImage}
-          onClose={() => setSelectedImage(null)}
-        />
-      )}
 
       <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl p-6 text-white shadow-lg">
         <div className="grid grid-cols-5 gap-4 items-center">

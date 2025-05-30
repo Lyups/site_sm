@@ -145,22 +145,22 @@ export default function App() {
               <button
                 onClick={handlePrevPage}
                 disabled={currentPage === 1}
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
+                className={`flex items-center gap-2 px-2 sm:px-4 py-2 rounded-lg transition-all duration-300 ${
                   currentPage === 1
                     ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
                     : 'bg-blue-100 text-blue-600 hover:bg-blue-200'
                 }`}
               >
                 <FaChevronLeft />
-                Предыдущая
+                <span className="hidden sm:inline">Предыдущая</span>
               </button>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1 sm:gap-2">
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                   <button
                     key={page}
                     onClick={() => setCurrentPage(page)}
-                    className={`w-8 h-8 rounded-lg transition-all duration-300 ${
+                    className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg transition-all duration-300 ${
                       currentPage === page
                         ? 'bg-blue-600 text-white'
                         : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -174,13 +174,13 @@ export default function App() {
               <button
                 onClick={handleNextPage}
                 disabled={currentPage === totalPages}
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
+                className={`flex items-center gap-2 px-2 sm:px-4 py-2 rounded-lg transition-all duration-300 ${
                   currentPage === totalPages
                     ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
                     : 'bg-blue-100 text-blue-600 hover:bg-blue-200'
                 }`}
               >
-                Следующая
+                <span className="hidden sm:inline">Следующая</span>
                 <FaChevronRight />
               </button>
             </div>

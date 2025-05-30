@@ -1,10 +1,11 @@
 'use client'
 
 import React from "react";
-import { Tabs, Tab, Card, CardBody, Image } from "@heroui/react";
+import { Tabs, Tab, Card, CardBody } from "@heroui/react";
 import { CategoryContent } from "./components/category-content";
 import { starsStyles } from "./styles";
 import { Global } from '@emotion/react';
+import { ImageModal } from './components/ImageModal';
 import { 
   TheaterComedy, 
   Rocket, 
@@ -23,6 +24,7 @@ import {
 
 export default function App() {
   const [selected, setSelected] = React.useState("Space");
+  const [selectedImage, setSelectedImage] = React.useState<{ src: string; alt: string } | null>(null);
 
   const handleSelectionChange = (key: React.Key) => {
     setSelected(key.toString());
@@ -79,12 +81,19 @@ export default function App() {
                   <span>{title}</span>
                 </div>
               }>
-                <CategoryContent category={key} />
+                <CategoryContent category={key} onImageClick={setSelectedImage} />
               </Tab>
             ))}
           </Tabs>
         </div>
       </div>
+
+      {selectedImage && (
+        <ImageModal
+          image={selectedImage}
+          onClose={() => setSelectedImage(null)}
+        />
+      )}
     </div>
   );
 }
