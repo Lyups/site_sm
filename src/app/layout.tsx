@@ -10,10 +10,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className="min-h-screen bg-white font-montserrat ">
+      <body className="min-h-screen bg-white font-montserrat">
         <Header />
-        <Breadcrumbs />
-        {children}
+        <main className="pt-24">
+          <Breadcrumbs />
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

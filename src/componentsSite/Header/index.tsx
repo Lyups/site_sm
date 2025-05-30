@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Logo from './Logo'
 import DesktopMenu from './DesktopMenu'
 import MobileMenu from './MobileMenu'
@@ -8,44 +8,66 @@ import Link from 'next/link'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    }
+    // Вызываем сразу при монтировании
+    handleScroll()
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   return (
-    // <header className="bg-gradient-to-r from-blue-300 via-white to-blue-300 shadow-sm py-4">
-    <header className="bg-white shadow-sm py-4">
-      <div className="container mx-auto px-4 flex justify-between items-center">
+    <header 
+      className={`fixed w-full z-50 transition-all duration-300 bg-white ${
+        isScrolled 
+          ? 'bg-white/90 backdrop-blur-md shadow-lg' 
+          : 'bg-gradient-to-r from-blue-50 via-white to-blue-50'
+      }`}
+    >
+      <div className="container mx-auto px-4 flex justify-between items-center py-4">
         <div className="flex items-center">
-          <Logo />
+          <div className="transform hover:scale-105 transition-transform duration-300">
+            <Logo />
+          </div>
           <DesktopMenu />
         </div>
 
         <div className="flex items-center space-x-4">
           <div className="hidden md:flex items-center gap-2">
-            <Link 
-              href="/search" 
-              className="py-2 px-4 text-black hover:text-blue-600 transition duration-300 flex items-center gap-2"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="11" cy="11" r="8"/>
-                <path d="m21 21-4.3-4.3"/>
-              </svg>
-              Поиск
-            </Link>
+            <div className="transform hover:scale-105 transition-transform duration-300">
+              <Link 
+                href="/search" 
+                className="py-2 px-4 text-black hover:text-blue-600 transition duration-300 flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="11" cy="11" r="8"/>
+                  <path d="m21 21-4.3-4.3"/>
+                </svg>
+                Поиск
+              </Link>
+            </div>
           </div>
 
           <div className="hidden md:flex space-x-2">
-            <Link 
-              href="/profile" 
-              className="py-2 px-4 text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-md shadow-sm transition duration-300"
-            >
-              Личный кабинет
-            </Link>
+            <div className="transform hover:scale-105 transition-transform duration-300">
+              <Link 
+                href="/profile" 
+                className="py-2 px-4 text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-md shadow-sm transition duration-300"
+              >
+                Личный кабинет
+              </Link>
+            </div>
           </div>
 
           <button 
             onClick={toggleMenu}
-            className="md:hidden text-gray-700 focus:outline-none"
+            className="md:hidden text-gray-700 focus:outline-none transform hover:scale-110 active:scale-95 transition-transform duration-200"
             aria-label="Открыть меню"
           >
             {isMenuOpen ? (
@@ -62,7 +84,6 @@ const Header = () => {
             )}
           </button>
         </div>
-        {/* Нужна логика, если <= 1025px ширина экрана, то это мобильная версия */}
         <MobileMenu
           isMenuOpen={isMenuOpen}
           toggleMenu={toggleMenu}
