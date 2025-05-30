@@ -28,8 +28,8 @@ export const ImageModal: React.FC<ImageModalProps> = ({
       if (e.key === 'Escape') onClose();
       if (e.key === 'ArrowRight' && hasNext) onNext?.();
       if (e.key === 'ArrowLeft' && hasPrev) onPrev?.();
-      if (e.key === '+') setScale(prev => Math.min(prev + 0.5, 2));
-      if (e.key === '-') setScale(prev => Math.max(prev - 0.5, 0.5));
+      if (e.key === '+') setScale(prev => Math.min(prev + 0.1, 2));
+      if (e.key === '-') setScale(prev => Math.max(prev - 0.1, 0.5));
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -38,6 +38,14 @@ export const ImageModal: React.FC<ImageModalProps> = ({
 
   const handleZoom = (newScale: number) => {
     setScale(newScale);
+  };
+
+  const handleZoomIn = () => {
+    setScale(prev => Math.min(prev + 0.1, 2));
+  };
+
+  const handleZoomOut = () => {
+    setScale(prev => Math.max(prev - 0.1, 0.5));
   };
 
   return (
@@ -59,9 +67,9 @@ export const ImageModal: React.FC<ImageModalProps> = ({
         {/* Кнопки масштабирования */}
         <div className="absolute top-4 left-4 flex gap-2 z-10 items-center">
           <button
-            onClick={() => handleZoom(0.5)}
-            className={`text-white hover:text-gray-300 transition-colors bg-black/50 p-2 rounded-full ${scale === 0.5 ? 'bg-white/20' : ''}`}
-            title="50%"
+            onClick={handleZoomOut}
+            className="text-white hover:text-gray-300 transition-colors bg-black/50 p-2 rounded-full"
+            title="Уменьшить"
           >
             <FaSearchMinus size={24} />
           </button>
@@ -76,9 +84,9 @@ export const ImageModal: React.FC<ImageModalProps> = ({
             <FaCompress size={24} />
           </button>
           <button
-            onClick={() => handleZoom(2)}
-            className={`text-white hover:text-gray-300 transition-colors bg-black/50 p-2 rounded-full ${scale === 2 ? 'bg-white/20' : ''}`}
-            title="200%"
+            onClick={handleZoomIn}
+            className="text-white hover:text-gray-300 transition-colors bg-black/50 p-2 rounded-full"
+            title="Увеличить"
           >
             <FaSearchPlus size={24} />
           </button>
@@ -104,12 +112,15 @@ export const ImageModal: React.FC<ImageModalProps> = ({
         )}
 
         {/* Изображение */}
-        <div className="relative max-w-[90%] max-h-[90%] transition-all duration-300">
+        <div className="relative max-w-[90%] max-h-[90%] transition-all duration-300 flex items-center justify-center">
           <img
             src={image.src}
             alt={image.alt}
             className="w-full h-full object-contain rounded-lg shadow-2xl transition-transform duration-300"
-            style={{ transform: `scale(${scale})` }}
+            style={{ 
+              transform: `scale(${scale})`,
+              transformOrigin: 'center center'
+            }}
           />
         </div>
 

@@ -8,24 +8,24 @@ import { ImageModal } from './components/ImageModal';
 export default function App() {
   // Массив изображений для галереи
   const galleryImages = [
-    { id: 1, src: "/images/gallery/photo1.jpg", alt: "Встреча волонтеров" },
-    { id: 2, src: "/images/gallery/photo2.jpg", alt: "Благотворительная акция" },
-    { id: 3, src: "/images/gallery/photo3.jpg", alt: "Волонтерский лагерь" },
-    { id: 4, src: "/images/gallery/photo4.jpg", alt: "Образовательный семинар" },
-    { id: 5, src: "/images/gallery/photo5.jpg", alt: "Международная конференция" },
-    { id: 6, src: "/images/gallery/photo6.jpg", alt: "Награждение волонтеров" },
-    { id: 7, src: "/images/gallery/photo7.jpg", alt: "Экологическая акция" },
-    { id: 8, src: "/images/gallery/photo8.jpg", alt: "Детский праздник" },
-    { id: 9, src: "/images/gallery/photo9.jpg", alt: "Спортивное мероприятие" },
-    { id: 10, src: "/images/gallery/photo10.jpg", alt: "Культурный фестиваль" },
-    { id: 11, src: "/images/gallery/photo11.jpg", alt: "Волонтерский десант" },
-    { id: 12, src: "/images/gallery/photo12.jpg", alt: "Образовательный форум" },
-    { id: 13, src: "/images/gallery/photo13.jpg", alt: "Благотворительный концерт" },
-    { id: 14, src: "/images/gallery/photo14.jpg", alt: "Экологический субботник" },
-    { id: 15, src: "/images/gallery/photo15.jpg", alt: "Волонтерский сбор" },
-    { id: 16, src: "/images/gallery/photo16.jpg", alt: "Международный форум" },
-    { id: 17, src: "/images/gallery/photo17.jpg", alt: "Награждение партнеров" },
-    { id: 18, src: "/images/gallery/photo18.jpg", alt: "Годовой отчет" },
+    { id: 1, src: "/images/gallery/photo1.png", alt: "Волонтёры медицины" },
+    { id: 2, src: "/images/gallery/photo2.png", alt: "Волонтеры экологии" },
+    { id: 3, src: "/images/gallery/photo3.png", alt: "Волонтёры соцзащиты" },
+    { id: 4, src: "/images/gallery/photo4.png", alt: "Гуманитарная помощь" },
+    { id: 5, src: "/images/gallery/photo5.png", alt: "Обучениающие мероприятия" },
+    { id: 6, src: "/images/gallery/photo6.png", alt: "Волонтёры - патриоты" },
+    //{ id: 7, src: "/images/gallery/photo7.jpg", alt: "Экологическая акция" },
+    //{ id: 8, src: "/images/gallery/photo8.jpg", alt: "Детский праздник" },
+    //{ id: 9, src: "/images/gallery/photo9.jpg", alt: "Спортивное мероприятие" },
+    //{ id: 10, src: "/images/gallery/photo10.jpg", alt: "Культурный фестиваль" },
+    //{ id: 11, src: "/images/gallery/photo11.jpg", alt: "Волонтерский десант" },
+    //{ id: 12, src: "/images/gallery/photo12.jpg", alt: "Образовательный форум" },
+    //{ id: 13, src: "/images/gallery/photo13.jpg", alt: "Благотворительный концерт" },
+    //{ id: 14, src: "/images/gallery/photo14.jpg", alt: "Экологический субботник" },
+    //{ id: 15, src: "/images/gallery/photo15.jpg", alt: "Волонтерский сбор" },
+    //{ id: 16, src: "/images/gallery/photo16.jpg", alt: "Международный форум" },
+   //{ id: 17, src: "/images/gallery/photo17.jpg", alt: "Награждение партнеров" },
+    //{ id: 18, src: "/images/gallery/photo18.jpg", alt: "Годовой отчет" },
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -70,7 +70,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* <!-- Hero блок --> */}
-      <section className="relative py-20 bg-gradient-to-r from-purple-900 via-sky-400 to-purple-900 text-white animate-gradient shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3)]">
+      <section className="relative py-20 bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-500 text-white animate-gradient shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3)]">
       <div className="absolute inset-0 opacity-20 bg-cover bg-black bg-center"></div>
         <div className="absolute right-[-50px] top-0 bottom-0 w-[30%] min-w-[400px] hidden md:block flex items-center">
             <img 
@@ -87,7 +87,7 @@ export default function App() {
                 <p className="text-xl mb-8 animate-fade-in animation-delay-200 text-shadow">
                
                 </p>
-                <p className="italic mb-1 animate-fade-in animation-delay-400 text-shadow">— Президент Благотворительного фонда
+                <p className="italic mb-1 animate-fade-in animation-delay-400 text-shadow"> Президент Благотворительного фонда
                 РВД Спутник Мира имени К. Э. Циолковского</p>
                 <p className="font-bold animate-fade-in animation-delay-400 text-shadow">Невский Сергей Владимирович</p>
     
@@ -110,6 +110,35 @@ export default function App() {
       {/* Content Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <Card className="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
+                <FaInfoCircle className="text-indigo-600 text-xl" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-800">О фонде</h2>
+            </div>
+            <div className="space-y-4">
+              <p className="text-lg pg-w8 font-bold text-gray-600 mb-6 leading-relaxed">
+                Благотворительный фонд РВД Спутник Мира имени К. Э. Циолковского </p>
+              <p className="text-lg pg-w8 text-gray-600 mb-6 leading-relaxed">Поддерживает волонтёров-добровольцев со светлыми помыслами и благородным сердцем.
+              Для Вас, наша команда разработала парадно-церемониальную, зимнюю и летнюю форму, с реестром специальных званий.</p> 
+                <p className="text-lg pg-w8 text-gray-600 mb-6 leading-relaxed">
+                Каждый волонтёр, имеет право на специальное звание, в зависимости от количества лет участия в волонтёрской организации, 
+                Ваше специальное звание, определяет и ежемесячную спецпремию, доплата к пенсии.        
+           </p>
+             <p className="text-lg pg-w8 text-gray-600 mb-12 leading-relaxed">
+                Условия просты, Вы регистрируетесь на платформе Спутник Мира и один раз в неделю , описываете благородный поступок в три строчки с фотоотчётом.
+                Что-бы пошить парадную форму и определить спецзвание, Вам необходимо подать заявку через Вашу организацию или лично на сайте спутникмира.рф
+              </p>
+              <p className="text-lg text-gray-600 italic leading-relaxed">
+                Наша миссия - развитие волонтерского движения, поддержка социальных инициатив и 
+                создание условий для реализации потенциала каждого человека.
+              </p>
+            </div>
+          </Card>
+
+
           {/* Photo Gallery Section */}
           <Card className="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl">
             <div className="flex items-center gap-3 mb-6">
@@ -187,25 +216,7 @@ export default function App() {
           </Card>
 
           {/* Text Content Section */}
-          <Card className="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
-                <FaInfoCircle className="text-indigo-600 text-xl" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-800">О фонде</h2>
-            </div>
-            <div className="space-y-4">
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Благотворительный фонд РВД "Спутник Мира" имени К.Э. Циолковского - это организация, 
-                которая объединяет людей, стремящихся сделать мир лучше через волонтерскую деятельность 
-                и благотворительность.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Наша миссия - развитие волонтерского движения, поддержка социальных инициатив и 
-                создание условий для реализации потенциала каждого человека.
-              </p>
-            </div>
-          </Card>
+
         </div>
 
         {/* Bottom Sections */}
@@ -244,12 +255,27 @@ export default function App() {
               <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
                 <h3 className="font-semibold text-gray-800 mb-2">Устав фонда</h3>
                 <p className="text-gray-600">Основные документы, регламентирующие деятельность фонда.</p>
-                <a href="#" className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">Скачать PDF →</a>
+                <a href="/files/ustav.pdf" className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">Скачать PDF →</a>
               </div>
               <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-                <h3 className="font-semibold text-gray-800 mb-2">Отчеты о деятельности</h3>
-                <p className="text-gray-600">Ежегодные отчеты о работе фонда и достигнутых результатах.</p>
-                <a href="#" className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">Скачать PDF →</a>
+                <h3 className="font-semibold text-gray-800 mb-2">Свидетельство о регистрации</h3>
+                <p className="text-gray-600">Свидетельство о регистрации некоммерческой организации</p>
+                <a href="/files/reg.pdf" className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">Скачать PDF →</a>
+              </div>
+              <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                <h3 className="font-semibold text-gray-800 mb-2">Договор оферты</h3>
+                <p className="text-gray-600">Публичная оферта об осуществлении безвозмездной благотворительной деятельности</p>
+                <a href="/files/oferta.pdf" className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">Скачать PDF →</a>
+              </div>
+              <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                <h3 className="font-semibold text-gray-800 mb-2">ОГРН</h3>
+                <p className="text-gray-600">Свидетельство о постановке на учёт в налоговом органе</p>
+                <a href="/files/ogrn.pdf" className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">Скачать PDF →</a>
+              </div>
+              <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                <h3 className="font-semibold text-gray-800 mb-2">Лист ЕГРЮЛ</h3>
+                <p className="text-gray-600">Лист записи Единого государственного реестра юридических лиц</p>
+                <a href="/files/list.pdf" className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">Скачать PDF →</a>
               </div>
             </div>
           </Card>

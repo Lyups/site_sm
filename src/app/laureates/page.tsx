@@ -19,7 +19,8 @@ import {
   AccountBalance, 
   Museum, 
   Public, 
-  Business 
+  Business, 
+  Star
 } from '@mui/icons-material';
 
 export default function App() {
@@ -43,7 +44,8 @@ export default function App() {
     { key: "Institution", title: "Образовательное учреждение", icon: AccountBalance },
     { key: "Heritage", title: "Всемирное историческое наследие", icon: Museum },
     { key: "International", title: "Международная организация", icon: Public },
-    { key: "Corporation", title: "Корпорация", icon: Business }
+    { key: "Corporation", title: "Корпорация", icon: Business },
+    { key: "Posmertno", title: "Посмертно", icon: Star }
   ];
 
   return (
