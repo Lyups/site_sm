@@ -40,7 +40,7 @@ const Header = () => {
 
         <div className="flex items-center space-x-4">
           <div className="hidden md:flex items-center gap-2">
-            <div className="transform hover:scale-105 transition-transform duration-300">
+            <div>
               <Link 
                 href="/search" 
                 className="py-2 px-4 text-black hover:text-blue-600 transition duration-300 flex items-center gap-2"
@@ -55,7 +55,7 @@ const Header = () => {
           </div>
 
           <div className="hidden md:flex space-x-2">
-            <div className="transform hover:scale-105 transition-transform duration-300">
+            <div>
               <Link 
                 href="/profile" 
                 className="py-2 px-4 text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-md shadow-sm transition duration-300"
