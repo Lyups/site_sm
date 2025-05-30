@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { FaHome, FaInfoCircle, FaMedal, FaAward, FaVoteYea, FaNewspaper, FaSearch } from 'react-icons/fa'
 
 type MobileMenuProps = {
   isMenuOpen: boolean
@@ -27,30 +28,29 @@ const MobileMenu = ({
 
           {/* Навигация */}
           <nav className="flex flex-col p-4 space-y-4">
-            <Link href="/" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2">
-              Главная
+            <Link href="/" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2 flex items-center gap-2">
+              <FaHome className="text-blue-500" /> Главная
             </Link>
             <Link href="/search" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2 flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="11" cy="11" r="8"/>
-                <path d="m21 21-4.3-4.3"/>
-              </svg>
-              Поиск
+              <FaSearch className="text-blue-500" /> Поиск
             </Link>
-            <Link href="/about" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2">
-              О проекте
+            <Link href="/about" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2 flex items-center gap-2">
+              <FaInfoCircle className="text-blue-500" /> О проекте
             </Link>
-            <Link href="/ranks" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2">
-              Система званий
+            <Link href="/laureates" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2 flex items-center gap-2">
+              <FaMedal className="text-blue-500" /> Лауреаты
             </Link>
-            <Link href="/awards" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2">
-              Премии
+            <Link href="/ranks" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2 flex items-center gap-2">
+              <FaMedal className="text-blue-500" /> Система званий
             </Link>
-            <Link href="/voting" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2">
-              Голосования
+            <Link href="/awards" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2 flex items-center gap-2">
+              <FaAward className="text-blue-500" /> Премии
             </Link>
-            <Link href="/news" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2">
-              Новости
+            <Link href="/voting" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2 flex items-center gap-2">
+              <FaVoteYea className="text-blue-500" /> Голосования
+            </Link>
+            <Link href="/news" onClick={toggleMenu} className="text-black hover:text-blue-600 py-2 flex items-center gap-2">
+              <FaNewspaper className="text-blue-500" /> Новости
             </Link>
 
             {/* Кнопки */}

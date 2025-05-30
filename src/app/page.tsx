@@ -290,40 +290,40 @@ export default function Home() {
     </section>
 
     {/* <!-- Путь волонтера --> */}
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-12 md:py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-4 text-black">Мечта волонтера</h2>
-            <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 md:mb-4 text-black">Мечта волонтера</h2>
+            <p className="text-center text-gray-600 mb-8 md:mb-16 max-w-2xl mx-auto text-base md:text-lg">
                 В добрый путь к великой судьбе Спутника Мира
             </p>
             
             <div className="max-w-4xl mx-auto">
-                <div className="space-y-8">
+                <div className="space-y-6 md:space-y-8">
                     {/* Зеленые погоны */}
-                    <div className="relative">
-                        <div className="flex items-center">
-                            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-xl shadow-lg z-10">
+                    <div className="relative group">
+                        <div className="flex flex-col md:flex-row items-start md:items-center">
+                            <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg z-10 transform transition-transform duration-300 group-hover:scale-110">
                                 1
                             </div>
-                            <div className="ml-6 flex-grow">
-                                <div className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <div className="flex items-center gap-4">
-                                            <div className="relative w-24 h-12 bg-gradient-to-b from-green-600 to-green-500 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-lg overflow-hidden">
-                                                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[length:10px_10px]"></div>
+                            <div className="mt-4 md:mt-0 md:ml-6 flex-grow">
+                                <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-3">
+                                        <div className="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-4">
+                                            <div className="relative w-20 md:w-24 h-10 md:h-12 bg-gradient-to-b from-green-600 to-green-500 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-lg overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
+                                                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[length:10px_10px] animate-shimmer"></div>
                                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-700 to-green-600"></div>
                                                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-700 to-green-600"></div>
                                                 <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-green-700 to-green-600"></div>
                                                 <div className="absolute right-0 top-0 w-1 h-full bg-gradient-to-b from-green-700 to-green-600"></div>
-                                                <span className="relative z-10 text-base">1-4</span>
+                                                <span className="relative z-10 text-sm md:text-base">1-4</span>
                                             </div>
-                                            <h3 className="text-2xl font-bold text-green-700">Зеленые погоны</h3>
+                                            <h3 className="text-xl md:text-2xl font-bold text-green-700">Зеленые погоны</h3>
                                         </div>
-                                        <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">
                                             1-4 года
                                         </span>
                                     </div>
-                                    <p className="text-gray-600 text-lg">
+                                    <p className="text-gray-600 text-base md:text-lg">
                                         Зеленый цвет - символ кедра и жизни. Ежегодное повышение в звании.
                                     </p>
                                 </div>
@@ -332,30 +332,30 @@ export default function Home() {
                     </div>
 
                     {/* Серебряные погоны */}
-                    <div className="relative">
-                        <div className="flex items-center">
-                            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gray-400 flex items-center justify-center text-white font-bold text-xl shadow-lg z-10">
+                    <div className="relative group">
+                        <div className="flex flex-col md:flex-row items-start md:items-center">
+                            <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-400 flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg z-10 transform transition-transform duration-300 group-hover:scale-110">
                                 2
                             </div>
-                            <div className="ml-6 flex-grow">
-                                <div className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <div className="flex items-center gap-4">
-                                            <div className="relative w-24 h-12 bg-gradient-to-b from-gray-500 to-gray-400 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-lg overflow-hidden">
-                                                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.2)_50%,transparent_75%)] bg-[length:10px_10px]"></div>
+                            <div className="mt-4 md:mt-0 md:ml-6 flex-grow">
+                                <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-3">
+                                        <div className="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-4">
+                                            <div className="relative w-20 md:w-24 h-10 md:h-12 bg-gradient-to-b from-gray-500 to-gray-400 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-lg overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
+                                                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.2)_50%,transparent_75%)] bg-[length:10px_10px] animate-shimmer"></div>
                                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-600 to-gray-500"></div>
                                                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-gray-600 to-gray-500"></div>
                                                 <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-gray-600 to-gray-500"></div>
                                                 <div className="absolute right-0 top-0 w-1 h-full bg-gradient-to-b from-gray-600 to-gray-500"></div>
-                                                <span className="relative z-10 text-base">4-12</span>
+                                                <span className="relative z-10 text-sm md:text-base">4-12</span>
                                             </div>
-                                            <h3 className="text-2xl font-bold text-gray-700">Серебряные погоны</h3>
+                                            <h3 className="text-xl md:text-2xl font-bold text-gray-700">Серебряные погоны</h3>
                                         </div>
-                                        <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">
                                             4-12 лет
                                         </span>
                                     </div>
-                                    <p className="text-gray-600 text-lg">
+                                    <p className="text-gray-600 text-base md:text-lg">
                                         Серебряный цвет - символ воды и энергии. Повышение в звании каждые 3 года.
                                     </p>
                                 </div>
@@ -364,30 +364,30 @@ export default function Home() {
                     </div>
 
                     {/* Бирюзовые погоны */}
-                    <div className="relative">
-                        <div className="flex items-center">
-                            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-xl shadow-lg z-10">
+                    <div className="relative group">
+                        <div className="flex flex-col md:flex-row items-start md:items-center">
+                            <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg z-10 transform transition-transform duration-300 group-hover:scale-110">
                                 3
                             </div>
-                            <div className="ml-6 flex-grow">
-                                <div className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <div className="flex items-center gap-4">
-                                            <div className="relative w-24 h-12 bg-gradient-to-b from-blue-600 to-blue-500 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-lg overflow-hidden">
-                                                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[length:10px_10px]"></div>
+                            <div className="mt-4 md:mt-0 md:ml-6 flex-grow">
+                                <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-3">
+                                        <div className="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-4">
+                                            <div className="relative w-20 md:w-24 h-10 md:h-12 bg-gradient-to-b from-blue-600 to-blue-500 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-lg overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
+                                                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[length:10px_10px] animate-shimmer"></div>
                                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-700 to-blue-600"></div>
                                                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-700 to-blue-600"></div>
                                                 <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-700 to-blue-600"></div>
                                                 <div className="absolute right-0 top-0 w-1 h-full bg-gradient-to-b from-blue-700 to-blue-600"></div>
-                                                <span className="relative z-10 text-base">13-27</span>
+                                                <span className="relative z-10 text-sm md:text-base">13-27</span>
                                             </div>
-                                            <h3 className="text-2xl font-bold text-blue-700">Бирюзовые погоны</h3>
+                                            <h3 className="text-xl md:text-2xl font-bold text-blue-700">Бирюзовые погоны</h3>
                                         </div>
-                                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">
                                             13-27 лет
                                         </span>
                                     </div>
-                                    <p className="text-gray-600 text-lg">
+                                    <p className="text-gray-600 text-base md:text-lg">
                                         Бирюзовый цвет - небесный символ. Повышение в звании каждые 5 лет.
                                     </p>
                                 </div>
@@ -396,30 +396,30 @@ export default function Home() {
                     </div>
 
                     {/* Золотые погоны */}
-                    <div className="relative">
-                        <div className="flex items-center">
-                            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold text-xl shadow-lg z-10">
+                    <div className="relative group">
+                        <div className="flex flex-col md:flex-row items-start md:items-center">
+                            <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg z-10 transform transition-transform duration-300 group-hover:scale-110">
                                 4
                             </div>
-                            <div className="ml-6 flex-grow">
-                                <div className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <div className="flex items-center gap-4">
-                                            <div className="relative w-24 h-12 bg-gradient-to-b from-yellow-500 to-yellow-400 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-lg overflow-hidden">
-                                                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.2)_50%,transparent_75%)] bg-[length:10px_10px]"></div>
+                            <div className="mt-4 md:mt-0 md:ml-6 flex-grow">
+                                <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-3">
+                                        <div className="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-4">
+                                            <div className="relative w-20 md:w-24 h-10 md:h-12 bg-gradient-to-b from-yellow-500 to-yellow-400 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-lg overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
+                                                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.2)_50%,transparent_75%)] bg-[length:10px_10px] animate-shimmer"></div>
                                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-600 to-yellow-500"></div>
                                                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-600 to-yellow-500"></div>
                                                 <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-yellow-600 to-yellow-500"></div>
                                                 <div className="absolute right-0 top-0 w-1 h-full bg-gradient-to-b from-yellow-600 to-yellow-500"></div>
-                                                <span className="relative z-10 text-base">28-42</span>
+                                                <span className="relative z-10 text-sm md:text-base">28-42</span>
                                             </div>
-                                            <h3 className="text-2xl font-bold text-yellow-700">Золотые погоны</h3>
+                                            <h3 className="text-xl md:text-2xl font-bold text-yellow-700">Золотые погоны</h3>
                                         </div>
-                                        <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">
                                             28-42 года
                                         </span>
                                     </div>
-                                    <p className="text-gray-600 text-lg">
+                                    <p className="text-gray-600 text-base md:text-lg">
                                         Золотой цвет - символизирует солнце. Повышение в звании каждые 5 лет.
                                     </p>
                                 </div>
@@ -427,31 +427,31 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* 40+ лет волонтерства */}
-                    <div className="relative">
-                        <div className="flex items-center">
-                            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-red-500 flex items-center justify-center text-white font-bold text-xl shadow-lg z-10">
+                    {/* Спутник Мира */}
+                    <div className="relative group">
+                        <div className="flex flex-col md:flex-row items-start md:items-center">
+                            <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-red-500 flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg z-10 transform transition-transform duration-300 group-hover:scale-110">
                                 5
                             </div>
-                            <div className="ml-6 flex-grow">
-                                <div className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <div className="flex items-center gap-4">
-                                            <div className="relative w-24 h-12 bg-gradient-to-b from-red-600 to-red-500 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-lg overflow-hidden">
-                                                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[length:10px_10px]"></div>
+                            <div className="mt-4 md:mt-0 md:ml-6 flex-grow">
+                                <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-3">
+                                        <div className="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-4">
+                                            <div className="relative w-20 md:w-24 h-10 md:h-12 bg-gradient-to-b from-red-600 to-red-500 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-lg overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
+                                                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[length:10px_10px] animate-shimmer"></div>
                                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-700 to-red-600"></div>
                                                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-700 to-red-600"></div>
                                                 <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-red-700 to-red-600"></div>
                                                 <div className="absolute right-0 top-0 w-1 h-full bg-gradient-to-b from-red-700 to-red-600"></div>
-                                                <span className="relative z-10 text-base">40+</span>
+                                                <span className="relative z-10 text-sm md:text-base">40+</span>
                                             </div>
-                                            <h3 className="text-2xl font-bold text-red-700">Спутник Мира</h3>
+                                            <h3 className="text-xl md:text-2xl font-bold text-red-700">Спутник Мира</h3>
                                         </div>
-                                        <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">
                                             Вершина судьбы волонтера
                                         </span>
                                     </div>
-                                    <p className="text-gray-600 text-lg">
+                                    <p className="text-gray-600 text-base md:text-lg">
                                         После 40+ лет волонтерства присваивается международный статус Спутник Мира.
                                     </p>
                                 </div>
@@ -461,8 +461,8 @@ export default function Home() {
                 </div>
             </div>
             
-            <div className="text-center mt-12">
-                <a href="/404" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition">
+            <div className="text-center mt-8 md:mt-12">
+                <a href="/404" className="bg-blue-600 text-white px-6 md:px-8 py-2 md:py-3 rounded-lg font-medium hover:bg-blue-700 transition shadow-lg hover:shadow-xl transform hover:scale-105">
                     Начать свой путь
                 </a>
             </div>

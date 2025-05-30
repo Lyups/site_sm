@@ -10,6 +10,7 @@ module.exports = {
       animation: {
         'fade-in': 'fadeIn 1s ease-in forwards',
         'gradient': 'gradient 45s ease infinite',
+        'shimmer': 'shimmer 2s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -25,6 +26,10 @@ module.exports = {
             'background-size': '200% 200%',
             'background-position': 'right center'
           },
+        },
+        shimmer: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
         },
       },
     },
