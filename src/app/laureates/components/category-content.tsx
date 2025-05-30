@@ -33,11 +33,11 @@ export const CategoryContent: React.FC<CategoryContentProps> = ({ category, onIm
         {categoryData.laureates.map((laureate, idx) => (
           <Card 
             key={idx}
-            className="bg-white text-black rounded-3xl shadow-lg min-h-[350px]"
+            className="bg-white/10 backdrop-blur-sm text-white rounded-3xl shadow-lg min-h-[350px] border border-white/20"
           >
             <CardBody className="flex flex-col items-center px-6 py-8">
               <div 
-                className="mb-6 w-full flex justify-center relative h-60 bg-white rounded-lg cursor-pointer"
+                className="mb-6 w-full flex justify-center relative h-60 bg-white/5 rounded-lg cursor-pointer border border-white/10"
                 onClick={() => onImageClick({ src: laureate.image, alt: `Фотография ${laureate.name}` })}
               >
                 <Image
@@ -59,7 +59,7 @@ export const CategoryContent: React.FC<CategoryContentProps> = ({ category, onIm
         ))}
       </div>
 
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl p-6 text-white shadow-lg">
+      <div className="bg-gradient-to-r from-indigo-500/80 via-blue-500/80 to-violet-500/80 rounded-3xl p-6 text-white shadow-lg backdrop-blur-sm border border-white/10 hover:shadow-xl transition-shadow duration-300">
         <div className="grid grid-cols-5 gap-4 items-center">
           <div className="col-span-4 text-center">
             <p className="text-base leading-relaxed italic" style={{ textShadow: '0 1px 1px rgba(0,0,0,0.2)' }}>{categoryData.description}</p>

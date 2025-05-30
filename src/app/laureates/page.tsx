@@ -50,6 +50,8 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-sky-400 to-purple-900 text-white flex flex-col relative">
+    {/* // <div className="relative py-20 bg-gradient-to-r from-cyan-500 via-cyan-300 to-cyan-500 text-white animate-gradient shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3)]"> */}
+
       <Global styles={starsStyles} />
       <div className="container mx-auto px-4 py-6 relative flex-grow">
         <div className="stars">
