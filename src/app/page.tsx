@@ -7,11 +7,11 @@ export default function Home() {
   return (
     <>
       {/* <!-- Hero блок --> */}
-    <section className="relative py-20 bg-gradient-to-r from-blue-900 via-blue-500 to-blue-900 text-white animate-gradient shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3)]">
+    <section className="relative py-20 bg-gradient-to-r from-purple-900 via-sky-400 to-purple-900 text-white animate-gradient shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3)]">
         <div className="absolute inset-0 opacity-20 bg-cover bg-black bg-center"></div>
         <div className="absolute right-[-50px] top-0 bottom-0 w-[30%] min-w-[400px] hidden md:block flex items-center">
             <img 
-                src="/images/hero/space.png" 
+                src="/images/hero/ciolkovsky.png" 
                 alt="Циолковский" 
                 className="w-full h-auto max-h-full object-contain opacity-80" 
             />
@@ -191,7 +191,7 @@ export default function Home() {
                                 За выдающиеся спортивные заслуги
                             </span>
                         </div>
-                        <div className="h-72 bg-gray-200 bg-[url('/images/img5.jpg')] bg-cover bg-center rounded-lg mb-4"></div>
+                        <div className="h-72 bg-gray-200 bg-[url('/images/home/img5.jpg')] bg-cover bg-center rounded-lg mb-4"></div>
                     </div>
                     <p className="text-gray-600 mb-4">
                         За присвоение статуса «Спутник мира» выдающемуся российскому хоккеисту
@@ -211,7 +211,7 @@ export default function Home() {
                                 Всемирное историческое наследие
                             </span>
                         </div>
-                        <div className="h-72 bg-gray-200 bg-[url('/images/img6.jpg')] bg-cover bg-center rounded-lg mb-4"></div>
+                        <div className="h-72 bg-gray-200 bg-[url('/images/home/img6.jpg')] bg-cover bg-center rounded-lg mb-4"></div>
                     </div>
                     <p className="text-gray-600 mb-4">
                         За присвоение городу-герою Сталинград статуса Спутник Мира в номинации Всемирное историческое наследие.
@@ -242,7 +242,7 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="bg-white rounded-lg shadow-sm overflow-hidden ">
-                    <div className="h-72 bg-gray-200 bg-[url('/images/img1.jpg')] bg-cover bg-center"></div>
+                    <div className="h-72 bg-gray-200 bg-[url('/images/home/img1.jpg')] bg-cover bg-center"></div>
                     <div className="p-6">
                         <div className="flex items-center text-sm text-gray-500 mb-3 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-calendar mr-1"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
@@ -257,7 +257,7 @@ export default function Home() {
                 </div>
                 
                 <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-                    <div className="h-72 bg-gray-200 bg-[url('/images/img2.jpg')] bg-cover bg-center"></div>
+                    <div className="h-72 bg-gray-200 bg-[url('/images/home/img2.jpg')] bg-cover bg-center"></div>
                     <div className="p-6">
                         <div className="flex items-center text-sm text-gray-500 mb-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-calendar mr-1"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
@@ -272,7 +272,7 @@ export default function Home() {
                 </div>
                 
                 <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-                    <div className="h-72 bg-gray-200 bg-[url('/images/img3.jpg')] bg-cover bg-center"></div>
+                    <div className="h-72 bg-gray-200 bg-[url('/images/home/img3.jpg')] bg-cover bg-center"></div>
                     <div className="p-6">
                         <div className="flex items-center text-sm text-gray-500 mb-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-calendar mr-1"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
@@ -496,7 +496,7 @@ export default function Home() {
     </section>
 
     {/* <!-- Призыв к действию --> */}
-    <section className="py-20 bg-gradient-to-r from-blue-900 via-blue-500 to-blue-900 text-white animate-gradient shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.3)]">
+    <section className="py-20 bg-gradient-to-r from-purple-900 via-sky-400 to-purple-900 text-white animate-gradient shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.3)]">
         <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-shadow-lg">Присоединяйтесь к проекту "Спутник Мира"</h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto text-shadow">

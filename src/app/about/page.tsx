@@ -70,11 +70,11 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* <!-- Hero блок --> */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-900 via-blue-500 to-blue-900 text-white animate-gradient shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3)]">
-        <div className="absolute inset-0 opacity-20 bg-cover bg-black bg-center"></div>
+      <section className="relative py-20 bg-gradient-to-r from-purple-900 via-sky-400 to-purple-900 text-white animate-gradient shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3)]">
+      <div className="absolute inset-0 opacity-20 bg-cover bg-black bg-center"></div>
         <div className="absolute right-[-50px] top-0 bottom-0 w-[30%] min-w-[400px] hidden md:block flex items-center">
             <img 
-                src="/images/hero/nemcov.png"  
+                src="/images/hero/nevsky.png"  
                 alt="Сергей Немцов" 
                 className="w-full h-auto max-h-full object-contain opacity-80" 
             />

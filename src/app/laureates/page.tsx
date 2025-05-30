@@ -45,7 +45,7 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white flex flex-col relative">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-sky-400 to-purple-900 text-white flex flex-col relative">
       <Global styles={starsStyles} />
       <div className="container mx-auto px-4 py-6 relative flex-grow">
         <div className="stars">
@@ -68,7 +68,7 @@ export default function App() {
             color="default"
             classNames={{
               tabList: "grid grid-cols-1 md:grid-cols-3 gap-4 mb-8",
-              tab: "flex items-center gap-2 text-blue-200 hover:text-white hover:bg-blue-700 rounded-lg p-3 transition-all duration-200 data-[selected=true]:bg-blue-600 data-[selected=true]:text-white",
+              tab: "flex items-center gap-2 text-white hover:text-white hover:bg-purple-800/50 rounded-lg p-3 transition-all duration-200 data-[selected=true]:bg-purple-700 data-[selected=true]:text-white shadow-lg",
               cursor: "hidden",
             }}
           >

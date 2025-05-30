@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaTimes, FaChevronLeft, FaChevronRight, FaExpand, FaCompress } from 'react-icons/fa';
+import { FaTimes, FaChevronLeft, FaChevronRight, FaExpand, FaCompress, FaSearchMinus, FaSearchPlus } from 'react-icons/fa';
 
 interface ImageModalProps {
   image: {
@@ -21,18 +21,24 @@ export const ImageModal: React.FC<ImageModalProps> = ({
   hasNext = false,
   hasPrev = false,
 }) => {
-  const [isZoomed, setIsZoomed] = React.useState(false);
+  const [scale, setScale] = React.useState(1);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
       if (e.key === 'ArrowRight' && hasNext) onNext?.();
       if (e.key === 'ArrowLeft' && hasPrev) onPrev?.();
+      if (e.key === '+') setScale(prev => Math.min(prev + 0.5, 2));
+      if (e.key === '-') setScale(prev => Math.max(prev - 0.5, 0.5));
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [onClose, onNext, onPrev, hasNext, hasPrev]);
+
+  const handleZoom = (newScale: number) => {
+    setScale(newScale);
+  };
 
   return (
     <div 
@@ -50,13 +56,33 @@ export const ImageModal: React.FC<ImageModalProps> = ({
           <FaTimes size={24} />
         </button>
 
-        {/* Кнопка зума */}
-        <button
-          onClick={() => setIsZoomed(!isZoomed)}
-          className="absolute top-4 left-4 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 p-2 rounded-full"
-        >
-          {isZoomed ? <FaCompress size={24} /> : <FaExpand size={24} />}
-        </button>
+        {/* Кнопки масштабирования */}
+        <div className="absolute top-4 left-4 flex gap-2 z-10 items-center">
+          <button
+            onClick={() => handleZoom(0.5)}
+            className={`text-white hover:text-gray-300 transition-colors bg-black/50 p-2 rounded-full ${scale === 0.5 ? 'bg-white/20' : ''}`}
+            title="50%"
+          >
+            <FaSearchMinus size={24} />
+          </button>
+          <div className="text-white bg-black/50 px-3 py-1 rounded-lg min-w-[60px] text-center">
+            {Math.round(scale * 100)}%
+          </div>
+          <button
+            onClick={() => handleZoom(1)}
+            className={`text-white hover:text-gray-300 transition-colors bg-black/50 p-2 rounded-full ${scale === 1 ? 'bg-white/20' : ''}`}
+            title="100%"
+          >
+            <FaCompress size={24} />
+          </button>
+          <button
+            onClick={() => handleZoom(2)}
+            className={`text-white hover:text-gray-300 transition-colors bg-black/50 p-2 rounded-full ${scale === 2 ? 'bg-white/20' : ''}`}
+            title="200%"
+          >
+            <FaSearchPlus size={24} />
+          </button>
+        </div>
 
         {/* Навигационные кнопки */}
         {hasPrev && (
@@ -78,14 +104,12 @@ export const ImageModal: React.FC<ImageModalProps> = ({
         )}
 
         {/* Изображение */}
-        <div className={`relative max-w-[90%] max-h-[90%] transition-all duration-300 ${isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}>
+        <div className="relative max-w-[90%] max-h-[90%] transition-all duration-300">
           <img
             src={image.src}
             alt={image.alt}
-            className={`w-full h-full object-contain rounded-lg shadow-2xl transition-transform duration-300 ${
-              isZoomed ? 'scale-150' : 'scale-100'
-            }`}
-            onClick={() => setIsZoomed(!isZoomed)}
+            className="w-full h-full object-contain rounded-lg shadow-2xl transition-transform duration-300"
+            style={{ transform: `scale(${scale})` }}
           />
         </div>
 
