@@ -112,29 +112,63 @@ export default function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                     <Card className="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
                 <FaInfoCircle className="text-indigo-600 text-xl" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-800">О фонде</h2>
+              <div>
+                <h2 className="text-2xl font-bold text-gray-800">О фонде</h2>
+                <p className="text-gray-500 mt-1">Информация о деятельности и миссии фонда</p>
+              </div>
             </div>
-            <div className="space-y-4">
-              <p className="text-lg pg-w8 font-bold text-gray-600 mb-6 leading-relaxed">
-                Благотворительный фонд РВД Спутник Мира имени К. Э. Циолковского </p>
-              <p className="text-lg pg-w8 text-gray-600 mb-6 leading-relaxed">Поддерживает волонтёров-добровольцев со светлыми помыслами и благородным сердцем.
-              Для Вас, наша команда разработала парадно-церемониальную, зимнюю и летнюю форму, с реестром специальных званий.</p> 
-                <p className="text-lg pg-w8 text-gray-600 mb-6 leading-relaxed">
-                Каждый волонтёр, имеет право на специальное звание, в зависимости от количества лет участия в волонтёрской организации, 
-                Ваше специальное звание, определяет и ежемесячную спецпремию, доплата к пенсии.        
-           </p>
-             <p className="text-lg pg-w8 text-gray-600 mb-12 leading-relaxed">
-                Условия просты, Вы регистрируетесь на платформе Спутник Мира и один раз в неделю , описываете благородный поступок в три строчки с фотоотчётом.
-                Что-бы пошить парадную форму и определить спецзвание, Вам необходимо подать заявку через Вашу организацию или лично на сайте спутникмира.рф
-              </p>
-              <p className="text-lg text-gray-600 italic leading-relaxed">
-                Наша миссия - развитие волонтерского движения, поддержка социальных инициатив и 
-                создание условий для реализации потенциала каждого человека.
-              </p>
+            <div className="space-y-6">
+              <div className="group p-4 bg-white border border-gray-100 rounded-xl hover:border-indigo-200 hover:bg-indigo-50 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FaMedal className="text-indigo-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-gray-800 mb-2 group-hover:text-indigo-700 transition-colors">Благотворительный фонд РВД Спутник Мира имени К. Э. Циолковского</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">Поддерживает волонтёров-добровольцев со светлыми помыслами и благородным сердцем. Для Вас, наша команда разработала парадно-церемониальную, зимнюю и летнюю форму, с реестром специальных званий.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group p-4 bg-white border border-gray-100 rounded-xl hover:border-indigo-200 hover:bg-indigo-50 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FaList className="text-indigo-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-gray-800 mb-2 group-hover:text-indigo-700 transition-colors">Специальные звания и премии</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">Каждый волонтёр имеет право на специальное звание, в зависимости от количества лет участия в волонтёрской организации. Ваше специальное звание определяет и ежемесячную спецпремию, доплату к пенсии.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group p-4 bg-white border border-gray-100 rounded-xl hover:border-indigo-200 hover:bg-indigo-50 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FaNewspaper className="text-indigo-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-gray-800 mb-2 group-hover:text-indigo-700 transition-colors">Как присоединиться</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">Условия просты: Вы регистрируетесь на платформе Спутник Мира и один раз в неделю описываете благородный поступок в три строчки с фотоотчётом. Для пошива парадной формы и определения спецзвания необходимо подать заявку через Вашу организацию или лично на сайте спутникмира.рф</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group p-4 bg-white border border-gray-100 rounded-xl hover:border-indigo-200 hover:bg-indigo-50 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FaGlobe className="text-indigo-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-gray-800 mb-2 group-hover:text-indigo-700 transition-colors">Наша миссия</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed italic">Развитие волонтерского движения, поддержка социальных инициатив и создание условий для реализации потенциала каждого человека.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </Card>
 
@@ -223,59 +257,154 @@ export default function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {/* Official Appeals */}
           <Card className="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
                 <FaFileAlt className="text-green-600 text-xl" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-800">Официальные обращения</h2>
-            </div>
-            <div className="space-y-4">
-              <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-                <h3 className="font-semibold text-gray-800 mb-2">Обращение к волонтерам</h3>
-                <p className="text-gray-600">Присоединяйтесь к нашему движению и станьте частью большой семьи волонтеров.</p>
-                <a href="#" className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">Читать далее →</a>
+              <div>
+                <h2 className="text-2xl font-bold text-gray-800">Официальные обращения</h2>
+                <p className="text-gray-500 mt-1">Важные сообщения и обращения к волонтерам и партнерам</p>
               </div>
-              <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-                <h3 className="font-semibold text-gray-800 mb-2">Обращение к партнерам</h3>
-                <p className="text-gray-600">Станьте партнером фонда и поддержите наши инициативы.</p>
-                <a href="#" className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">Читать далее →</a>
+            </div>
+            <div className="grid gap-4">
+              <div className="group p-4 bg-white border border-gray-100 rounded-xl hover:border-green-200 hover:bg-green-50 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FaVoteYea className="text-green-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-gray-800 mb-1 group-hover:text-green-700 transition-colors">Обращение к волонтерам</h3>
+                    <p className="text-gray-600 text-sm mb-2">Присоединяйтесь к нашему движению и станьте частью большой семьи волонтеров</p>
+                    <a href="#" className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium text-sm">
+                      Читать далее
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group p-4 bg-white border border-gray-100 rounded-xl hover:border-green-200 hover:bg-green-50 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FaHandshake className="text-green-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-gray-800 mb-1 group-hover:text-green-700 transition-colors">Обращение к партнерам</h3>
+                    <p className="text-gray-600 text-sm mb-2">Станьте партнером фонда и поддержите наши инициативы в развитии волонтерского движения</p>
+                    <a href="#" className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium text-sm">
+                      Читать далее
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </Card>
 
           {/* Fund Documents */}
           <Card className="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
                 <FaHandshake className="text-purple-600 text-xl" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-800">Документы Фонда</h2>
+              <div>
+                <h2 className="text-2xl font-bold text-gray-800">Документы Фонда</h2>
+                <p className="text-gray-500 mt-1">Официальные документы и регламентирующие материалы</p>
+              </div>
             </div>
-            <div className="space-y-4">
-              <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-                <h3 className="font-semibold text-gray-800 mb-2">Устав фонда</h3>
-                <p className="text-gray-600">Основные документы, регламентирующие деятельность фонда.</p>
-                <a href="/files/ustav.pdf" className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">Скачать PDF →</a>
+            <div className="grid gap-4">
+              <div className="group p-4 bg-white border border-gray-100 rounded-xl hover:border-purple-200 hover:bg-purple-50 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FaFileAlt className="text-purple-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-gray-800 mb-1 group-hover:text-purple-700 transition-colors">Устав фонда</h3>
+                    <p className="text-gray-600 text-sm mb-2">Основные документы, регламентирующие деятельность фонда</p>
+                    <a href="/files/ustav.pdf" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium text-sm">
+                      Скачать PDF
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-                <h3 className="font-semibold text-gray-800 mb-2">Свидетельство о регистрации</h3>
-                <p className="text-gray-600">Свидетельство о регистрации некоммерческой организации</p>
-                <a href="/files/reg.pdf" className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">Скачать PDF →</a>
+
+              <div className="group p-4 bg-white border border-gray-100 rounded-xl hover:border-purple-200 hover:bg-purple-50 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FaFileAlt className="text-purple-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-gray-800 mb-1 group-hover:text-purple-700 transition-colors">Свидетельство о регистрации</h3>
+                    <p className="text-gray-600 text-sm mb-2">Свидетельство о регистрации некоммерческой организации</p>
+                    <a href="/files/reg.pdf" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium text-sm">
+                      Скачать PDF
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-                <h3 className="font-semibold text-gray-800 mb-2">Договор оферты</h3>
-                <p className="text-gray-600">Публичная оферта об осуществлении безвозмездной благотворительной деятельности</p>
-                <a href="/files/oferta.pdf" className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">Скачать PDF →</a>
+
+              <div className="group p-4 bg-white border border-gray-100 rounded-xl hover:border-purple-200 hover:bg-purple-50 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FaFileAlt className="text-purple-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-gray-800 mb-1 group-hover:text-purple-700 transition-colors">Договор оферты</h3>
+                    <p className="text-gray-600 text-sm mb-2">Публичная оферта об осуществлении безвозмездной благотворительной деятельности</p>
+                    <a href="/files/oferta.pdf" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium text-sm">
+                      Скачать PDF
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-                <h3 className="font-semibold text-gray-800 mb-2">ОГРН</h3>
-                <p className="text-gray-600">Свидетельство о постановке на учёт в налоговом органе</p>
-                <a href="/files/ogrn.pdf" className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">Скачать PDF →</a>
+
+              <div className="group p-4 bg-white border border-gray-100 rounded-xl hover:border-purple-200 hover:bg-purple-50 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FaFileAlt className="text-purple-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-gray-800 mb-1 group-hover:text-purple-700 transition-colors">ОГРН</h3>
+                    <p className="text-gray-600 text-sm mb-2">Свидетельство о постановке на учёт в налоговом органе</p>
+                    <a href="/files/ogrn.pdf" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium text-sm">
+                      Скачать PDF
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-                <h3 className="font-semibold text-gray-800 mb-2">Лист ЕГРЮЛ</h3>
-                <p className="text-gray-600">Лист записи Единого государственного реестра юридических лиц</p>
-                <a href="/files/list.pdf" className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">Скачать PDF →</a>
+
+              <div className="group p-4 bg-white border border-gray-100 rounded-xl hover:border-purple-200 hover:bg-purple-50 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FaFileAlt className="text-purple-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-gray-800 mb-1 group-hover:text-purple-700 transition-colors">Лист ЕГРЮЛ</h3>
+                    <p className="text-gray-600 text-sm mb-2">Лист записи Единого государственного реестра юридических лиц</p>
+                    <a href="/files/list.pdf" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium text-sm">
+                      Скачать PDF
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </Card>
